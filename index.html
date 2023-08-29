@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>First Webpage</title>
+</head>
+<body>
+  <div class="blobs-container">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v17.0&appId=633851784824917&autoLogAppEvents=1" nonce="PyXTS1oD"></script>
+    <header>
+      <nav class="navbar">
+        <h class="logo">
+          <img src="./static/img/logo_white.png" alt="Logo">
+        </h>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="chat.html">CHATBOT</a></li>
+            <li><a href="#">ABOUT ME</a></li>
+            <li><a target="_blank" style="color: var(--color-red-holberton);" href="https://holberton.anahuac.mx/">HOLBERTON</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+      <div class="header"><h1>AI <span class="title-header-added">CHATBOT</span> FOR <span class="title-header-subh1">EVERYONE</span> </h1></div>
+      <div class="under-header-img">
+        <img src="./static/img/header-bg-1.jpeg" alt="">
+      </div>
+  
+      <a href="chat.html" class="btn-goto-chat">
+        TRY NOW
+      </a>
+
+      <article class="article-container">
+        <div>
+          <p class="about-project-title">About this project</p>
+          <div class="about-project-content">
+            <span>This project</span> is mainly focused on the integration of blob style visual elements for the background and the new moder style of webpages like the <span>NFT Art</span>, this project uses the <span>OpenAI</span> API with the <span>ChatGPT 3.5 </span>model for interaction. Due to the specifications of the contest, not being able to use backend programming, it was necessary to use <span>LocalStorage</span> to store the chats. 
+          </div>
+        </div>
+      </article>
+
+      <aside >
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://uzieltorres.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </aside>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="./static/img/logo_white.png" alt="Logo">
+        </div>
+        <p class="footer-text">Made by Bernardo Uziel Franco Torres<br/>for <a href="https://apply.holbertonschool.com" target="_blank">Holberton School</a>.</p>
+        <div class="footer-social-icons">
+          <a target="_blank" href="https://www.linkedin.com/in/uziel-f-1b7988215/"><img src="./static/img/icons/linkedin.png" alt="Linkedin"></a>
+          <a target="_blank" href="https://github.com/Aplex2723"><img src="./static/img/icons/github.svg" alt="Github"></a>
+          <a target="_blank" href="https://www.instagram.com/uziel.ft/"><img src="./static/img/icons/instagram.png" alt="Instagram"></a>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+        </div>
+        </div>
+    </footer>
+
+</body>
+</html>
