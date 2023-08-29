@@ -4,6 +4,7 @@
 :root {
     --bg-color-1: rgba(26, 35, 46);
     --bg-color-2: rgb(31, 39, 48);
+    --bg-color-2-glass: rgb(31, 39, 48, 0.59);
     --bg-color-3: rgb(50, 63, 77);
 
     --color-magent-1: #7D7AFB;
@@ -110,16 +111,6 @@ code {
 
 }
 .blob:nth-child(4) {
-    background-color: var(--color-blue-2);
-    top: 80vh;
-    right: 0;
-    width: 289px;
-    height: 500px;
-    filter: blur(160px);
-
-}
-
-.blob:nth-child(5) {
     background-color: var(--color-blue-1);
     top: 0;
     right: 0;
@@ -128,6 +119,36 @@ code {
     filter: blur(125px);
 
 }
+.blob:nth-child(5) {
+    background-color: var(--color-blue-2);
+    top: 80vh;
+    right: 0;
+    width: 289px;
+    height: 500px;
+    filter: blur(160px);
+
+}
+.blob:nth-child(6) {
+    background-color: var(--color-blue-3);
+    top: 90vh;
+    right: -5vw;
+    width: 268px;
+    height: 440px;
+    filter: blur(250px);
+
+}
+.blob:nth-child(7) {
+    background-color: var(--color-pink-2);
+    top: 105vh;
+    left: 25vw;
+    width: 300px;
+    height: 1000px;
+    transform: rotate(-110deg);
+    filter: blur(200px);
+
+}
+
+
 
 /* Empiza la seccion del navbar */
 .navbar {
@@ -208,7 +229,7 @@ code {
 }
 .title-header-added {
     background: #D225E1;
-    background: linear-gradient(to bottom right, #D225E1 0%, #2565E1 100%);
+    background: linear-gradient(to bottom right, #D225E1 0%, #0e48bb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -406,6 +427,7 @@ code {
     flex-direction: column;
     overflow: auto;
     border-left: solid 5px var(--bg-color-3);
+    background-image: url('./static/img/logo.png');
 }
 
 
@@ -477,15 +499,32 @@ code {
     margin-bottom: 15px;
     margin-left: auto;
     border-radius: 10px;
+    display: flex;
+    text-align: right;
 
 }
 
+.chatbot-message img{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
 .user-message {
-    padding: 1rem;
+    padding: 0 1rem;
     background-color: var(--bg-color-2);
     border-radius: 10px;
     margin-right: auto;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.user-message img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+
 }
 
 #chat-container {
@@ -493,13 +532,14 @@ code {
 }
 
 .chat-article-container {
-    background: var(--bg-color-2);
+    background: var(--bg-color-2-glass);
     width: auto;
+    backdrop-filter: blur(20px);
     flex: 2;
     margin: 0 1rem;
     display: flex;
     border-radius: 20px;
-    box-shadow: 0 0 25px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 25px 25px 0 rgb(0 0 0 / 30%);
 }
 
 .select-title {
@@ -521,13 +561,22 @@ aside.disqus_container{
     margin: auto;
     padding: 5% 5%;
     border-radius: 10px;
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-2-glass);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 14px 16px rgba(0, 0, 0, 0.2);
+
 }
 
 .article-container {
     display: flex;
+    flex-direction: column;
+}
+
+.about-project-header {
+
     margin: 15% 15%;
     text-align: center;
+
 }
 
 .about-project-title {
@@ -572,10 +621,63 @@ aside.disqus_container{
       box-shadow: 12px 0 #FFF, -12px 0 #FFF2;
     }
   }
-        
-      
 
-/* Estilos responsivos */
+.about-article-container {
+    flex: 2;
+    margin: 0 1rem;
+}
+
+.header-text-container {
+    justify-content: center;
+    display: flex;
+    padding-left: 2rem;
+    align-items: center;
+}
+
+.about-header-section h1{
+    line-height: 74%;
+    width: 28rem;
+    letter-spacing: -5px;
+    font-size: 8rem;
+    margin: 1rem 2rem;
+    font-weight: 900;
+}
+.header-text-container img{
+    width: auto;
+    margin: auto;
+}
+.header-text-container h2{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 90%;
+}
+.header-text-container p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.holbertion-section {
+    background-color: var(--color-red-holberton);
+    height: 20rem;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+.blob.hidded {
+    display: none !important;
+}
+/* Responsive */
+@media screen and (max-width: 1400px){
+    main.main-container {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    aside.disqus_container {
+        width: auto;
+        margin: 5% 3%;
+    }
+}
 @media screen and (max-width: 720px) {
     main.main-container {
         flex-direction: column;
@@ -585,7 +687,7 @@ aside.disqus_container{
         width: auto;
         margin: 5% 3%;
     }
-    .article-container{
+    .about-project-header{
         margin: 35% 5%;
         text-align: center;
     }
@@ -622,5 +724,17 @@ aside.disqus_container{
         flex-direction: column;
         width: auto;
         margin: 0 3%;
+    }
+    .header-text-container {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .header-text-container img {
+        width: 20rem;
+    }
+    .about-header-section h1{
+        font-size: 6rem;
+        width: 20rem;
+        margin: 0;
     }
 }

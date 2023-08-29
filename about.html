@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/style.css">
-    <title>AI Chatbot | Holberton</title>
+    <title>About Me | Holberton</title>
 </head>
 <body>
     <div class="blobs-container">
-      <div class="blob"></div>
-      <div class="blob"></div>
-      <div class="blob"></div>
-      <div class="blob"></div>
-    </div>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v17.0&appId=633851784824917&autoLogAppEvents=1" nonce="PyXTS1oD"></script>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob hidded"></div>
+        <div class="blob hidded"></div>
+        <div class="blob hidded"></div>
+      </div>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v17.0&appId=633851784824917&autoLogAppEvents=1" nonce="PyXTS1oD"></script>
+    
     <header>
         <nav class="navbar">
           <h class="logo">
@@ -29,29 +33,17 @@
         </nav>
       </header>
     <main class="main-container">
-
-        <article class="chat-article-container">
-            <div id="last-chats-container">
-                <label class="select-title">Recent Chats</label>
-
-                <div id="chat-list">
+        <article class="about-article-container">
+            <section class="about-header-section">
+                <h1><span class="title-header-added">WHO</span> I AM?</h1>
+                <div class="header-text-container">
+                    <img src="./static/img/image-header-about.png">
+                    <div class="felx-row">
+                        <h2>Hello! I am Bernardo <span class="title-header-added">Uziel </span>Franco Torres</h2>
+                        <p>I am currently a Student at <b>Anahuac Mayab</b> and a <b>Fullstack Developer</b>. From a very young age I have been interested in technology and that is how I grew up. <br> Throughout these years I have created several projects that have helped me <b>improve</b> my technical skills.</p>
+                    </div>
                 </div>
-                
-                <button type="button" id="add-chat-button">
-                    Add Chat
-                </button>
-                <button id="clear-button">Clear chats</button>
-            </div>
-            <div id="chat-container">
-                <div id="chat-messages">
-                  
-                </div>
-                <div style="display: flex; margin-bottom: 0.75rem;">
-                    <input id="user-input" type="text" placeholder="Escribe un mensaje...">
-                    <button id="send-button">➤</button>
-                    
-                </div>
-              </div>
+            </section>
         </article>
         <aside class="disqus_container">
             <div id="disqus_thread"></div>
@@ -90,6 +82,5 @@
           </div>
           </div>
       </footer>
-    <script src="./static/js/index.js"></script>
 </body>
 </html>

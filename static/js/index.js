@@ -1,4 +1,4 @@
-const APIKEY = '';
+const APIKEY = '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';
 const URL = 'https://api.openai.com/v1/chat/completions';
 const MODEL = "gpt-3.5-turbo";
 const MAX_TOKENS = 50;
@@ -67,8 +67,13 @@ const addNewChat = () => {
 // addUserMessage: Function to add user message in DOM
 const addUserMessage = (message) => {
   const messageElement = document.createElement('div');
+  const messageText = document.createElement('p');
+  const imageElement = document.createElement('img');
+  imageElement.src = './static/img/icons/user.png';
   messageElement.className = 'user-message';
-  messageElement.textContent = message;
+  messageText.textContent = message;
+  messageElement.appendChild(imageElement);
+  messageElement.appendChild(messageText)
   chatMessages.appendChild(messageElement);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
@@ -76,9 +81,14 @@ const addUserMessage = (message) => {
 // addBotMessage: Function to add assistant message in DOM
 const addBotMessage = (message) => {
   const messageElement = document.createElement('div');
-  const formattedText = message.replace(/\n/g, "<br>").replace(/```([\s\S]*?)```/g, '<code>$1</code>');;
+  const imageElement = document.createElement('img');
+  const messageText = document.createElement('p');
+  imageElement.src = './static/img/icons/robot.png';
+  const formattedText = message.replace(/\n/g, "<br>").replace(/```([\s\S]*?)```/g, '<code>$1</code>');
   messageElement.className = 'chatbot-message';
-  messageElement.innerHTML = formattedText;
+  messageText.innerHTML = formattedText;
+  messageElement.appendChild(messageText)
+  messageElement.appendChild(imageElement);
   chatMessages.appendChild(messageElement);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
@@ -114,6 +124,7 @@ const getResponse = (id) => {
     })
     .then(response => response.json()) // Parsing the data to JS format
     .then(data => {
+        console.log(data)
         const chatbotResponse = data.choices[0].message.content;
         // If we get the correct data, we save it and display it
         if( chatbotResponse ){
@@ -202,7 +213,6 @@ const createOption = (id) => {
     optionElement.value = id;
     optionElement.textContent = `Chat ${parseInt(id)+1}`
     optionElement.classList.add('option-chat')
-    console.log(id)
     optionElement.appendChild(imageElement)
     optionElement.addEventListener('click', () => loadConversation(id))
     chatListDiv.appendChild(optionElement)

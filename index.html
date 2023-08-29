@@ -14,6 +14,7 @@
     <div class="blob"></div>
     <div class="blob"></div>
     <div class="blob"></div>
+    <div class="blob"></div>
   </div>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v17.0&appId=633851784824917&autoLogAppEvents=1" nonce="PyXTS1oD"></script>
@@ -25,31 +26,30 @@
         <ul class="nav-links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="chat.html">CHATBOT</a></li>
-            <li><a href="#">ABOUT ME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
             <li><a target="_blank" style="color: var(--color-red-holberton);" href="https://holberton.anahuac.mx/">HOLBERTON</a></li>
         </ul>
       </nav>
     </header>
     <main>
-
-      <div class="header"><h1>AI <span class="title-header-added">CHATBOT</span> FOR <span class="title-header-subh1">EVERYONE</span> </h1></div>
-      <div class="under-header-img">
-        <img src="./static/img/header-bg-1.jpeg" alt="">
+      <div>
+        <div class="header"><h1>AI <span class="title-header-added">CHATBOT</span> FOR <span class="title-header-subh1">EVERYONE</span> </h1></div>
+        <div class="under-header-img">
+          <img src="./static/img/header-bg-1.jpeg" alt="">
+        </div>
+    
+        <a href="chat.html" class="btn-goto-chat">
+          TRY NOW
+        </a>
       </div>
-  
-      <a href="chat.html" class="btn-goto-chat">
-        TRY NOW
-      </a>
-
-      <article class="article-container">
-        <div>
+      <article class="article-container" >
+        <section class="about-project-header">
           <p class="about-project-title">About this project</p>
           <div class="about-project-content">
             <span>This project</span> is mainly focused on the integration of blob style visual elements for the background and the new moder style of webpages like the <span>NFT Art</span>, this project uses the <span>OpenAI</span> API with the <span>ChatGPT 3.5 </span>model for interaction. Due to the specifications of the contest, not being able to use backend programming, it was necessary to use <span>LocalStorage</span> to store the chats. 
           </div>
-        </div>
+        </section>
       </article>
-
       <aside >
         <div id="disqus_thread"></div>
         <script>
